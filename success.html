@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      padding: 50px;
+    }
+    .success-message {
+      background: #d4edda;
+      color: #155724;
+      padding: 20px;
+      border-radius: 5px;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+  </style>
+</head>
+<body>
+  <div class="success-message">
+    <h1>Thank You!</h1>
+    <p>Your form has been submitted successfully.</p>
+    <p>We'll contact you shortly.</p>
+  </div>
+  
+  <script>
+    // Notify Google Sites of successful submission
+    if (window.top !== window.self) {
+      window.top.postMessage('formSuccess', '*');
+    }
+  </script>
+</body>
+</html>
